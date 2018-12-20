@@ -1,0 +1,10 @@
+C:\Users\SysOp\source\repos\HowTos\BindingSource\bin\Debug\BindingSource.exe.config
+C:\Users\SysOp\source\repos\HowTos\BindingSource\bin\Debug\BindingSource.exe
+C:\Users\SysOp\source\repos\HowTos\BindingSource\bin\Debug\BindingSource.pdb
+C:\Users\SysOp\source\repos\HowTos\BindingSource\obj\Debug\BindingSource.csprojAssemblyReference.cache
+C:\Users\SysOp\source\repos\HowTos\BindingSource\obj\Debug\BindingSourceDemo.Form1.resources
+C:\Users\SysOp\source\repos\HowTos\BindingSource\obj\Debug\BindingSource.Properties.Resources.resources
+C:\Users\SysOp\source\repos\HowTos\BindingSource\obj\Debug\BindingSource.csproj.GenerateResource.cache
+C:\Users\SysOp\source\repos\HowTos\BindingSource\obj\Debug\BindingSource.csproj.CoreCompileInputs.cache
+C:\Users\SysOp\source\repos\HowTos\BindingSource\obj\Debug\BindingSource.exe
+C:\Users\SysOp\source\repos\HowTos\BindingSource\obj\Debug\BindingSource.pdb
