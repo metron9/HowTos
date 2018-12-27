@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CCSpecialModel;
 
 namespace BindingSourceDemo
 
@@ -19,7 +20,7 @@ namespace BindingSourceDemo
             public string LastName { set; get; }
         }
 
-        BindingSource tblNamesBS = new BindingSource();
+
 
         public Form1()
         {
@@ -33,36 +34,31 @@ namespace BindingSourceDemo
 
         private void btnGenerateList_Click(object sender, EventArgs e)
         {
-            BindingList<EmailData> datalist = new BindingList<EmailData>();
+            List<EmailData> datalist = new List<EmailData>();
 
             datalist.Add(new EmailData { FirstName = "John", LastName = "Smith"});
             datalist.Add(new EmailData { FirstName = "Mark", LastName = "Robin"});
             datalist.Add(new EmailData { FirstName = "Don", LastName = "Adems" });
+            
 
-            tblNamesBS.DataSource = datalist;
+            CCSpecialEntities context = new CCSpecialEntities();
 
-            txtFirstName.DataBindings.Add(new Binding("Text", tblNamesBS, "FirstName"));
-            txtLastName.DataBindings.Add(new Binding("Text", tblNamesBS, "LastName"));
+            int count = context.Ecolabpos.Count();
+
+            var ctx = new CCSpecialEntities();
+            var griddata = ctx.Ecolabpos.ToList().OrderBy(n => n.SHIPTO).ThenBy(n => n.DUEDATE);
+            DataTable dbdataset = new DataTable();
+            dbdataset = (DataTable)griddata;
+
+            BindingSource bSource = new BindingSource();
+
+
+            dataGridView1.DataSource = dbdataset;
         }
 
-        private void btnFirst_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            tblNamesBS.MoveFirst();
-        }
-
-        private void btnPrevious_Click(object sender, EventArgs e)
-        {
-            tblNamesBS.MovePrevious();
-        }
-
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            tblNamesBS.MoveNext();
-        }
-
-        private void btnLast_Click(object sender, EventArgs e)
-        {
-            tblNamesBS.MoveLast();
+            txtFirstName.Text = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
         }
     }
 }

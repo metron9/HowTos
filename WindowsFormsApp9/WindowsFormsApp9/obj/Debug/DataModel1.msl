@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CCSpecialEntitiesStoreContainer" CdmEntityContainer="CCSpecialEntities">
+    <EntitySetMapping Name="Ecolabpos">
+      <EntityTypeMapping TypeName="CCSpecialModel.Ecolabpo">
+        <MappingFragment StoreEntitySet="ecolabpos">
+          <ScalarProperty Name="EcolabposID" ColumnName="EcolabposID" />
+          <ScalarProperty Name="PO" ColumnName="PO" />
+          <ScalarProperty Name="PODATE" ColumnName="PODATE" />
+          <ScalarProperty Name="POLINE" ColumnName="POLINE" />
+          <ScalarProperty Name="PART" ColumnName="PART" />
+          <ScalarProperty Name="QTYDUE" ColumnName="QTYDUE" />
+          <ScalarProperty Name="DETAILS" ColumnName="DETAILS" />
+          <ScalarProperty Name="Details1" ColumnName="Details1" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="DUEDATE" ColumnName="DUEDATE" />
+          <ScalarProperty Name="SHIPTO" ColumnName="SHIPTO" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="CustomersPoDocument" ColumnName="CustomersPoDocument" />
+          <ScalarProperty Name="CustomersPoDocumentType" ColumnName="CustomersPoDocumentType" />
+          <ScalarProperty Name="Specs" ColumnName="Specs" />
+          <ScalarProperty Name="Specs1" ColumnName="Specs1" />
+          <ScalarProperty Name="PartRevision" ColumnName="PartRevision" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseOrderMasters">
+      <EntityTypeMapping TypeName="CCSpecialModel.PurchaseOrderMaster">
+        <MappingFragment StoreEntitySet="PurchaseOrderMasters">
+          <ScalarProperty Name="PurchaseOrderMasterID" ColumnName="PurchaseOrderMasterID" />
+          <ScalarProperty Name="PO" ColumnName="PO" />
+          <ScalarProperty Name="PODATE" ColumnName="PODATE" />
+          <ScalarProperty Name="POLINE" ColumnName="POLINE" />
+          <ScalarProperty Name="PART" ColumnName="PART" />
+          <ScalarProperty Name="QTYDUE" ColumnName="QTYDUE" />
+          <ScalarProperty Name="DETAILS" ColumnName="DETAILS" />
+          <ScalarProperty Name="Details1" ColumnName="Details1" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="DUEDATE" ColumnName="DUEDATE" />
+          <ScalarProperty Name="SHIPTO" ColumnName="SHIPTO" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="CustomersPoDocument" ColumnName="CustomersPoDocument" />
+          <ScalarProperty Name="CustomersPoDocumentType" ColumnName="CustomersPoDocumentType" />
+          <ScalarProperty Name="Specs" ColumnName="Specs" />
+          <ScalarProperty Name="Specs1" ColumnName="Specs1" />
+          <ScalarProperty Name="PartRevision" ColumnName="PartRevision" />
+          <ScalarProperty Name="Terms" ColumnName="Terms" />
+          <ScalarProperty Name="ShpVia" ColumnName="ShpVia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

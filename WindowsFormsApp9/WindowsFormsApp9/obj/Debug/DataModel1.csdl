@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CCSpecialModel" Alias="Self" d4p1:ViewGeneration="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:devart="http://devart.com/schemas/edml/ConceptualSchemaExtensions/1.0" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" annotation:UseStrongSpatialTypes="false" xmlns:d4p1="http://devart.com/schemas/edml/ConceptualSchemaExtensions/1.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CCSpecialEntities" annotation:LazyLoadingEnabled="true" ed:Guid="6c2433c1-6a94-4900-a096-5e8e3d9bbfb8">
+    <EntitySet Name="Ecolabpos" EntityType="CCSpecialModel.Ecolabpo" />
+    <EntitySet Name="PurchaseOrderMasters" EntityType="CCSpecialModel.PurchaseOrderMaster" />
+  </EntityContainer>
+  <EntityType Name="Ecolabpo" ed:Guid="0475de51-a235-44f1-bc99-f0b93ab2a338">
+    <Key>
+      <PropertyRef Name="EcolabposID" />
+    </Key>
+    <Property Name="EcolabposID" Type="String" Nullable="false" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="ffa424d0-b025-41e0-a06b-926199339ebc" />
+    <Property Name="PO" Type="String" MaxLength="9" FixedLength="true" ed:ValidateMaxLength="9" ed:ValidateRequired="false" ed:Guid="d610429b-e782-4002-a5e5-f5d675534759" />
+    <Property Name="PODATE" Type="DateTime" ed:ValidateRequired="false" ed:Guid="37089c5e-8f73-4adf-a181-30b88667f0aa" />
+    <Property Name="POLINE" Type="Decimal" Precision="10" Scale="0" ed:ValidateRequired="false" ed:Guid="837c9fef-65db-4f80-94a3-ce95b70d8ee8" />
+    <Property Name="PART" Type="Decimal" Precision="8" Scale="0" ed:ValidateRequired="false" ed:Guid="d07a2b8b-3016-4634-bdcd-d103c4addc0d" />
+    <Property Name="QTYDUE" Type="Decimal" Precision="10" Scale="0" ed:ValidateRequired="false" ed:Guid="5441d19c-59a4-4976-8a9d-0f2f031b5126" />
+    <Property Name="DETAILS" Type="String" MaxLength="60" FixedLength="true" ed:ValidateMaxLength="60" ed:ValidateRequired="false" ed:Guid="ec837b58-bf1b-4135-838e-7c0b0c9e86ed" />
+    <Property Name="Details1" Type="String" ed:ValidateRequired="false" ed:Guid="8a1bd50a-07b4-4bf3-81ff-bc586ffc4c4d" />
+    <Property Name="PRICE" Type="Decimal" Precision="10" Scale="3" ed:ValidateRequired="false" ed:Guid="fc45c1c4-7b08-4c97-bf8a-7768b5b2924d" />
+    <Property Name="DUEDATE" Type="DateTime" ed:ValidateRequired="false" ed:Guid="6c8cb282-9362-41ba-9ce4-8781e5002d02" />
+    <Property Name="SHIPTO" Type="String" MaxLength="10" FixedLength="true" ed:ValidateMaxLength="10" ed:ValidateRequired="false" ed:Guid="265281de-15d3-4f2c-af2c-a391d2f7bc66" />
+    <Property Name="ADDRESS" Type="String" MaxLength="80" FixedLength="true" ed:ValidateMaxLength="80" ed:ValidateRequired="false" ed:Guid="5dd014a3-6eb6-477c-9ecf-3d00e737bda4" />
+    <Property Name="CustomersPoDocument" Type="String" ed:ValidateRequired="false" ed:Guid="36c68443-c05d-4de3-acb4-125cc0a24f93" />
+    <Property Name="CustomersPoDocumentType" Type="String" MaxLength="3" Unicode="true" FixedLength="true" ed:ValidateMaxLength="3" ed:ValidateRequired="false" ed:Guid="3565e8a7-e043-436d-b088-06a2fb96ba86" />
+    <Property Name="Specs" Type="String" Unicode="true" ed:ValidateRequired="false" ed:Guid="e35b6524-6030-4125-8850-c92326894996" />
+    <Property Name="Specs1" Type="String" Unicode="true" ed:ValidateRequired="false" ed:Guid="b8b816a9-3ac9-4568-866a-8ab12944c3fe" />
+    <Property Name="PartRevision" Type="String" Unicode="true" ed:ValidateRequired="false" ed:Guid="c17e71f9-cfdd-47b3-ab18-fbe9aa327f58" />
+  </EntityType>
+  <EntityType Name="PurchaseOrderMaster" ed:Guid="b0501d4e-64d1-41a6-987d-fe6d6b8f26fd">
+    <Key>
+      <PropertyRef Name="PurchaseOrderMasterID" />
+    </Key>
+    <Property Name="PurchaseOrderMasterID" Type="String" Nullable="false" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="f05608b7-c1fd-47e7-84db-da046831db0a" />
+    <Property Name="PO" Type="String" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="053299f1-9153-4396-9b30-9dc27cdd3417" />
+    <Property Name="PODATE" Type="DateTime" ed:ValidateRequired="false" ed:Guid="841444bd-9b03-4602-a809-8bd669a01720" />
+    <Property Name="POLINE" Type="String" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="90cf530a-4911-4715-85e9-016509bfac13" />
+    <Property Name="PART" Type="String" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="8b787d95-b560-4422-a2af-7192bed1f548" />
+    <Property Name="QTYDUE" Type="Decimal" Precision="10" Scale="0" ed:ValidateRequired="false" ed:Guid="c553277e-7ace-4363-a2b7-62c7addf309c" />
+    <Property Name="DETAILS" Type="String" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="68e5c685-8ddd-48ab-97f3-7ba3710fa461" />
+    <Property Name="Details1" Type="String" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="a144e830-0044-4836-9e30-1d8d50cba1ce" />
+    <Property Name="PRICE" Type="Decimal" Precision="10" Scale="3" ed:ValidateRequired="false" ed:Guid="f8288b47-1509-4209-bae2-ee732fa513fc" />
+    <Property Name="DUEDATE" Type="DateTime" ed:ValidateRequired="false" ed:Guid="7c6bff43-b918-47ba-ab57-c5c9b9797e1c" />
+    <Property Name="SHIPTO" Type="String" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="2fb9af7c-0187-41d0-8567-00d5bf6207c3" />
+    <Property Name="ADDRESS" Type="String" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="267d5a01-7295-4bcf-a33e-0bb87554a1b2" />
+    <Property Name="CustomersPoDocument" Type="String" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="9146c4e8-b56f-4266-9faf-56d5b4b6910c" />
+    <Property Name="CustomersPoDocumentType" Type="String" MaxLength="3" Unicode="true" FixedLength="true" ed:ValidateMaxLength="3" ed:ValidateRequired="false" ed:Guid="7e55759c-a8a1-4d2f-9cff-a1e92d766670" />
+    <Property Name="Specs" Type="String" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="54f133c4-b1ab-48fa-90d6-0cb8cd889782" />
+    <Property Name="Specs1" Type="String" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="44364d5c-9db0-4b8f-b63e-2c0157a19695" />
+    <Property Name="PartRevision" Type="String" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="ce53389b-1ff9-460b-aa94-4a691182ce29" />
+    <Property Name="Terms" Type="String" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="ecf07017-834b-4915-9573-ab022a50c470" />
+    <Property Name="ShpVia" Type="String" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="ff3572f1-6a28-4055-96dd-caa9700bfcff" />
+  </EntityType>
+</Schema>

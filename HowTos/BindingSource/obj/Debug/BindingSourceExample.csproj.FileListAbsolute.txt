@@ -1,0 +1,9 @@
+C:\Users\SysOp\Documents\GitHub\HowTos\HowTos\BindingSource\obj\Debug\EcolabPo.ssdl
+C:\Users\SysOp\Documents\GitHub\HowTos\HowTos\BindingSource\obj\Debug\EcolabPo.csdl
+C:\Users\SysOp\Documents\GitHub\HowTos\HowTos\BindingSource\obj\Debug\EcolabPo.msl
+C:\Users\SysOp\Documents\GitHub\HowTos\HowTos\BindingSource\obj\Debug\BindingSourceDemo.Form1.resources
+C:\Users\SysOp\Documents\GitHub\HowTos\HowTos\BindingSource\obj\Debug\BindingSource.Properties.Resources.resources
+C:\Users\SysOp\Documents\GitHub\HowTos\HowTos\BindingSource\obj\Debug\BindingSourceExample.csproj.GenerateResource.cache
+C:\Users\SysOp\Documents\GitHub\HowTos\HowTos\BindingSource\obj\Debug\BindingSourceExample.csproj.CoreCompileInputs.cache
+C:\Users\SysOp\Documents\GitHub\HowTos\HowTos\BindingSource\obj\Debug\BindingSource.exe
+C:\Users\SysOp\Documents\GitHub\HowTos\HowTos\BindingSource\obj\Debug\BindingSource.pdb

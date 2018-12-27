@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CCSpecialModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:devart="http://devart.com/schemas/edml/StorageSchemaExtensions/1.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CCSpecialEntitiesStoreContainer">
+    <EntitySet Name="ecolabpos" EntityType="CCSpecialModel.Store.ecolabpos" store:Type="Tables" Schema="dbo" Table="ecolabpos" />
+    <EntitySet Name="PurchaseOrderMasters" EntityType="CCSpecialModel.Store.PurchaseOrderMasters" store:Type="Tables" Schema="dbo" Table="PurchaseOrderMasters" />
+  </EntityContainer>
+  <EntityType Name="ecolabpos">
+    <Key>
+      <PropertyRef Name="EcolabposID" />
+    </Key>
+    <Property Name="EcolabposID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PO" Type="char" MaxLength="9" />
+    <Property Name="PODATE" Type="datetime" />
+    <Property Name="POLINE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="PART" Type="decimal" Precision="8" Scale="0" />
+    <Property Name="QTYDUE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="DETAILS" Type="char" MaxLength="60" />
+    <Property Name="Details1" Type="varchar(max)" />
+    <Property Name="PRICE" Type="decimal" Precision="10" Scale="3" />
+    <Property Name="DUEDATE" Type="datetime" />
+    <Property Name="SHIPTO" Type="char" MaxLength="10" />
+    <Property Name="ADDRESS" Type="char" MaxLength="80" />
+    <Property Name="CustomersPoDocument" Type="varchar(max)" />
+    <Property Name="CustomersPoDocumentType" Type="nchar" MaxLength="3" />
+    <Property Name="Specs" Type="nvarchar(max)" />
+    <Property Name="Specs1" Type="nvarchar(max)" />
+    <Property Name="PartRevision" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="PurchaseOrderMasters">
+    <Key>
+      <PropertyRef Name="PurchaseOrderMasterID" />
+    </Key>
+    <Property Name="PurchaseOrderMasterID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PO" Type="varchar" MaxLength="50" />
+    <Property Name="PODATE" Type="datetime" />
+    <Property Name="POLINE" Type="varchar" MaxLength="50" />
+    <Property Name="PART" Type="varchar" MaxLength="50" />
+    <Property Name="QTYDUE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="DETAILS" Type="varchar" MaxLength="50" />
+    <Property Name="Details1" Type="varchar" MaxLength="50" />
+    <Property Name="PRICE" Type="decimal" Precision="10" Scale="3" />
+    <Property Name="DUEDATE" Type="datetime" />
+    <Property Name="SHIPTO" Type="varchar" MaxLength="50" />
+    <Property Name="ADDRESS" Type="varchar" MaxLength="50" />
+    <Property Name="CustomersPoDocument" Type="varchar" MaxLength="50" />
+    <Property Name="CustomersPoDocumentType" Type="nchar" MaxLength="3" />
+    <Property Name="Specs" Type="varchar" MaxLength="50" />
+    <Property Name="Specs1" Type="varchar" MaxLength="50" />
+    <Property Name="PartRevision" Type="varchar" MaxLength="50" />
+    <Property Name="Terms" Type="varchar" MaxLength="50" />
+    <Property Name="ShpVia" Type="varchar" MaxLength="50" />
+  </EntityType>
+</Schema>

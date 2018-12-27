@@ -1,0 +1,113 @@
+﻿<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CCSpecialModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:devart="http://devart.com/schemas/edml/StorageSchemaExtensions/1.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="CCSpecialEntitiesStoreContainer">
+          <EntitySet Name="ecolabpos" EntityType="CCSpecialModel.Store.ecolabpos" store:Type="Tables" Schema="dbo" Table="ecolabpos" />
+        </EntityContainer>
+        <EntityType Name="ecolabpos">
+          <Key>
+            <PropertyRef Name="EcolabposID" />
+          </Key>
+          <Property Name="EcolabposID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PO" Type="char" MaxLength="9" />
+          <Property Name="PODATE" Type="datetime" />
+          <Property Name="POLINE" Type="decimal" Precision="10" Scale="0" />
+          <Property Name="PART" Type="decimal" Precision="8" Scale="0" />
+          <Property Name="QTYDUE" Type="decimal" Precision="10" Scale="0" />
+          <Property Name="DETAILS" Type="char" MaxLength="60" />
+          <Property Name="Details1" Type="varchar(max)" />
+          <Property Name="PRICE" Type="decimal" Precision="10" Scale="3" />
+          <Property Name="DUEDATE" Type="datetime" />
+          <Property Name="SHIPTO" Type="char" MaxLength="10" />
+          <Property Name="ADDRESS" Type="char" MaxLength="80" />
+          <Property Name="CustomersPoDocument" Type="varchar(max)" />
+          <Property Name="CustomersPoDocumentType" Type="nchar" MaxLength="3" />
+          <Property Name="Specs" Type="nvarchar(max)" />
+          <Property Name="Specs1" Type="nvarchar(max)" />
+          <Property Name="PartRevision" Type="nvarchar(max)" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CCSpecialModel" Alias="Self" d4p1:ViewGeneration="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:devart="http://devart.com/schemas/edml/ConceptualSchemaExtensions/1.0" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" annotation:UseStrongSpatialTypes="false" xmlns:d4p1="http://devart.com/schemas/edml/ConceptualSchemaExtensions/1.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CCSpecialEntities" annotation:LazyLoadingEnabled="true" ed:Guid="f9291b8e-a75a-4862-9b15-a6a577d8df7c">
+          <EntitySet Name="Ecolabpos" EntityType="CCSpecialModel.Ecolabpo" />
+        </EntityContainer>
+        <EntityType Name="Ecolabpo" ed:Guid="2e04bdc4-0e07-4ef2-875c-c5b9d04f3b59">
+          <Key>
+            <PropertyRef Name="EcolabposID" />
+          </Key>
+          <Property Name="EcolabposID" Type="String" Nullable="false" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="82fb43c0-9d70-4474-95a1-726370bae4e2" />
+          <Property Name="PO" Type="String" MaxLength="9" FixedLength="true" ed:ValidateMaxLength="9" ed:ValidateRequired="false" ed:Guid="c9f262b6-fbc0-448d-bab2-9fdf72aaa71e" />
+          <Property Name="PODATE" Type="DateTime" ed:ValidateRequired="false" ed:Guid="16f29040-3479-415c-ac39-6c92ba6ef220" />
+          <Property Name="POLINE" Type="Decimal" Precision="10" Scale="0" ed:ValidateRequired="false" ed:Guid="ec1749a1-9819-41a0-b461-9fdc97036866" />
+          <Property Name="PART" Type="Decimal" Precision="8" Scale="0" ed:ValidateRequired="false" ed:Guid="b4cf0758-54ae-442a-9ac0-c0167f9e5004" />
+          <Property Name="QTYDUE" Type="Decimal" Precision="10" Scale="0" ed:ValidateRequired="false" ed:Guid="0563eb9e-08be-42f1-9846-bdcfdd86768c" />
+          <Property Name="DETAILS" Type="String" MaxLength="60" FixedLength="true" ed:ValidateMaxLength="60" ed:ValidateRequired="false" ed:Guid="74c574e8-d12e-40f3-bce5-8de6a66979b7" />
+          <Property Name="Details1" Type="String" ed:ValidateRequired="false" ed:Guid="c980deb5-be27-4cb3-aadb-d1a3e0c93a25" />
+          <Property Name="PRICE" Type="Decimal" Precision="10" Scale="3" ed:ValidateRequired="false" ed:Guid="3d661d29-9811-4d5d-9019-364b10d143fd" />
+          <Property Name="DUEDATE" Type="DateTime" ed:ValidateRequired="false" ed:Guid="00f1cb58-b4c1-4349-a9e8-c9e5fdc8c381" />
+          <Property Name="SHIPTO" Type="String" MaxLength="10" FixedLength="true" ed:ValidateMaxLength="10" ed:ValidateRequired="false" ed:Guid="c4352c61-ab94-44bf-a3a5-48ce8b832894" />
+          <Property Name="ADDRESS" Type="String" MaxLength="80" FixedLength="true" ed:ValidateMaxLength="80" ed:ValidateRequired="false" ed:Guid="294b721e-957f-4192-8bb9-350b023f7c4b" />
+          <Property Name="CustomersPoDocument" Type="String" ed:ValidateRequired="false" ed:Guid="d2282509-e362-42f3-ad1b-9131b447f646" />
+          <Property Name="CustomersPoDocumentType" Type="String" MaxLength="3" Unicode="true" FixedLength="true" ed:ValidateMaxLength="3" ed:ValidateRequired="false" ed:Guid="73a18ff1-08d9-4f95-a9a7-32c33ff94a88" />
+          <Property Name="Specs" Type="String" Unicode="true" ed:ValidateRequired="false" ed:Guid="b6623115-fbdf-4119-b14c-2b941849ed3d" />
+          <Property Name="Specs1" Type="String" Unicode="true" ed:ValidateRequired="false" ed:Guid="ab770391-4ebd-406b-af9d-9cad33395552" />
+          <Property Name="PartRevision" Type="String" Unicode="true" ed:ValidateRequired="false" ed:Guid="6db5fd15-42bc-48fb-a3a9-c86270908ba4" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- MSL content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CCSpecialEntitiesStoreContainer" CdmEntityContainer="CCSpecialEntities">
+          <EntitySetMapping Name="Ecolabpos">
+            <EntityTypeMapping TypeName="CCSpecialModel.Ecolabpo">
+              <MappingFragment StoreEntitySet="ecolabpos">
+                <ScalarProperty Name="EcolabposID" ColumnName="EcolabposID" />
+                <ScalarProperty Name="PO" ColumnName="PO" />
+                <ScalarProperty Name="PODATE" ColumnName="PODATE" />
+                <ScalarProperty Name="POLINE" ColumnName="POLINE" />
+                <ScalarProperty Name="PART" ColumnName="PART" />
+                <ScalarProperty Name="QTYDUE" ColumnName="QTYDUE" />
+                <ScalarProperty Name="DETAILS" ColumnName="DETAILS" />
+                <ScalarProperty Name="Details1" ColumnName="Details1" />
+                <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+                <ScalarProperty Name="DUEDATE" ColumnName="DUEDATE" />
+                <ScalarProperty Name="SHIPTO" ColumnName="SHIPTO" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="CustomersPoDocument" ColumnName="CustomersPoDocument" />
+                <ScalarProperty Name="CustomersPoDocumentType" ColumnName="CustomersPoDocumentType" />
+                <ScalarProperty Name="Specs" ColumnName="Specs" />
+                <ScalarProperty Name="Specs1" ColumnName="Specs1" />
+                <ScalarProperty Name="PartRevision" ColumnName="PartRevision" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <edmx:Diagrams>
+      <Diagram Name="Main" />
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
