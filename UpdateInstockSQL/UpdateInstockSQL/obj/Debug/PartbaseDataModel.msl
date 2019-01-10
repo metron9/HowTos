@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CCSpecialEntitiesStoreContainer" CdmEntityContainer="CCSpecialEntities">
+    <EntitySetMapping Name="PARTBASEs">
+      <EntityTypeMapping TypeName="CCSpecialModel.PARTBASE">
+        <MappingFragment StoreEntitySet="PARTBASEs">
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="PartNumber" ColumnName="PartNumber" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="OnShelf" ColumnName="OnShelf" />
+          <ScalarProperty Name="BoxNumber" ColumnName="BoxNumber" />
+          <ScalarProperty Name="PriceTableGuid" ColumnName="PriceTableGuid" />
+          <ScalarProperty Name="PartBaseID" ColumnName="PartBaseID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

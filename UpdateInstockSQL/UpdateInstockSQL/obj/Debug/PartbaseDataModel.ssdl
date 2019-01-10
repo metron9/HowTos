@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CCSpecialModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:devart="http://devart.com/schemas/edml/StorageSchemaExtensions/1.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CCSpecialEntitiesStoreContainer">
+    <EntitySet Name="PARTBASEs" EntityType="CCSpecialModel.Store.PARTBASE" store:Type="Tables" Schema="dbo" Table="PARTBASE" />
+  </EntityContainer>
+  <EntityType Name="PARTBASE">
+    <Key>
+      <PropertyRef Name="PartBaseID" />
+    </Key>
+    <Property Name="JobNumber" Type="decimal" Precision="8" Scale="3" />
+    <Property Name="Unit" Type="nchar" MaxLength="10" />
+    <Property Name="PartNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Price" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="OnShelf" Type="int" />
+    <Property Name="BoxNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="PriceTableGuid" Type="nvarchar" MaxLength="50" />
+    <Property Name="PartBaseID" Type="uniqueidentifier" Nullable="false" devart:DefaultValue="newid()" />
+  </EntityType>
+</Schema>

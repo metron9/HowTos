@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CCSpecialModel" Alias="Self" d4p1:ViewGeneration="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:devart="http://devart.com/schemas/edml/ConceptualSchemaExtensions/1.0" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" annotation:UseStrongSpatialTypes="false" xmlns:d4p1="http://devart.com/schemas/edml/ConceptualSchemaExtensions/1.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CCSpecialEntities" annotation:LazyLoadingEnabled="true" ed:Guid="48afc93d-e747-4285-a96b-609f4fda7cf4">
+    <EntitySet Name="PARTBASEs" EntityType="CCSpecialModel.PARTBASE" />
+  </EntityContainer>
+  <EntityType Name="PARTBASE" ed:Guid="a7b2f633-6d9f-4ea2-a630-79cc2ff2f155">
+    <Key>
+      <PropertyRef Name="PartBaseID" />
+    </Key>
+    <Property Name="JobNumber" Type="Decimal" Precision="8" Scale="3" ed:ValidateRequired="false" ed:Guid="dc7b01fc-ca48-408a-a9bc-b9321f02ce16" />
+    <Property Name="Unit" Type="String" MaxLength="10" Unicode="true" FixedLength="true" ed:ValidateMaxLength="10" ed:ValidateRequired="false" ed:Guid="39ecebdb-60c2-40d5-b010-717a3b44e5ce" />
+    <Property Name="PartNumber" Type="String" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="e195827c-406a-4350-82ae-501bd5a73f10" />
+    <Property Name="Description" Type="String" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="886d0850-369e-46d7-ac44-dccd6cff7006" />
+    <Property Name="Price" Type="Decimal" Precision="10" Scale="4" ed:ValidateRequired="false" ed:Guid="2c5f77b9-97cc-4bfe-9142-98c0456ae28a" />
+    <Property Name="OnShelf" Type="Int32" ed:ValidateRequired="false" ed:Guid="b70b3e8e-69ca-4f5f-a6ac-d8b116b172e3" />
+    <Property Name="BoxNumber" Type="String" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="78b136f8-271e-4074-abcd-78cd6ac65ed7" />
+    <Property Name="PriceTableGuid" Type="String" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="2bccdf20-f607-4548-bbc1-dc7f11a6b26e" />
+    <Property Name="PartBaseID" Type="Guid" Nullable="false" ed:ValidateRequired="true" ed:Guid="b015567a-ae31-4d4a-bdc0-c5dee72fbbd1" />
+  </EntityType>
+</Schema>

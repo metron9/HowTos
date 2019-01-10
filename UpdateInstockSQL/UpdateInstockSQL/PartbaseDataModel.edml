@@ -1,0 +1,89 @@
+﻿<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CCSpecialModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:devart="http://devart.com/schemas/edml/StorageSchemaExtensions/1.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="CCSpecialEntitiesStoreContainer">
+          <EntitySet Name="PARTBASEs" EntityType="CCSpecialModel.Store.PARTBASE" store:Type="Tables" Schema="dbo" Table="PARTBASE" />
+        </EntityContainer>
+        <EntityType Name="PARTBASE">
+          <Key>
+            <PropertyRef Name="PartBaseID" />
+          </Key>
+          <Property Name="JobNumber" Type="decimal" Precision="8" Scale="3" />
+          <Property Name="Unit" Type="nchar" MaxLength="10" />
+          <Property Name="PartNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="OnShelf" Type="int" />
+          <Property Name="BoxNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="PriceTableGuid" Type="nvarchar" MaxLength="50" />
+          <Property Name="PartBaseID" Type="uniqueidentifier" Nullable="false" devart:DefaultValue="newid()" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CCSpecialModel" Alias="Self" d4p1:ViewGeneration="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:devart="http://devart.com/schemas/edml/ConceptualSchemaExtensions/1.0" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" annotation:UseStrongSpatialTypes="false" xmlns:d4p1="http://devart.com/schemas/edml/ConceptualSchemaExtensions/1.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CCSpecialEntities" annotation:LazyLoadingEnabled="true" ed:Guid="48afc93d-e747-4285-a96b-609f4fda7cf4">
+          <EntitySet Name="PARTBASEs" EntityType="CCSpecialModel.PARTBASE" />
+        </EntityContainer>
+        <EntityType Name="PARTBASE" ed:Guid="a7b2f633-6d9f-4ea2-a630-79cc2ff2f155">
+          <Key>
+            <PropertyRef Name="PartBaseID" />
+          </Key>
+          <Property Name="JobNumber" Type="Decimal" Precision="8" Scale="3" ed:ValidateRequired="false" ed:Guid="dc7b01fc-ca48-408a-a9bc-b9321f02ce16" />
+          <Property Name="Unit" Type="String" MaxLength="10" Unicode="true" FixedLength="true" ed:ValidateMaxLength="10" ed:ValidateRequired="false" ed:Guid="39ecebdb-60c2-40d5-b010-717a3b44e5ce" />
+          <Property Name="PartNumber" Type="String" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="e195827c-406a-4350-82ae-501bd5a73f10" />
+          <Property Name="Description" Type="String" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="886d0850-369e-46d7-ac44-dccd6cff7006" />
+          <Property Name="Price" Type="Decimal" Precision="10" Scale="4" ed:ValidateRequired="false" ed:Guid="2c5f77b9-97cc-4bfe-9142-98c0456ae28a" />
+          <Property Name="OnShelf" Type="Int32" ed:ValidateRequired="false" ed:Guid="b70b3e8e-69ca-4f5f-a6ac-d8b116b172e3" />
+          <Property Name="BoxNumber" Type="String" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="78b136f8-271e-4074-abcd-78cd6ac65ed7" />
+          <Property Name="PriceTableGuid" Type="String" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="2bccdf20-f607-4548-bbc1-dc7f11a6b26e" />
+          <Property Name="PartBaseID" Type="Guid" Nullable="false" ed:ValidateRequired="true" ed:Guid="b015567a-ae31-4d4a-bdc0-c5dee72fbbd1" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- MSL content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CCSpecialEntitiesStoreContainer" CdmEntityContainer="CCSpecialEntities">
+          <EntitySetMapping Name="PARTBASEs">
+            <EntityTypeMapping TypeName="CCSpecialModel.PARTBASE">
+              <MappingFragment StoreEntitySet="PARTBASEs">
+                <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="PartNumber" ColumnName="PartNumber" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="OnShelf" ColumnName="OnShelf" />
+                <ScalarProperty Name="BoxNumber" ColumnName="BoxNumber" />
+                <ScalarProperty Name="PriceTableGuid" ColumnName="PriceTableGuid" />
+                <ScalarProperty Name="PartBaseID" ColumnName="PartBaseID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <edmx:Diagrams>
+      <Diagram Name="Main" />
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
